@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useLocalStorage = (itemName, initialValue) => {
+const useLocalStorage = (itemName = 'TODOS_V1', initialValue = []) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [item, setItem] = useState(initialValue)

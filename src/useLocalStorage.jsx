@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react";
 
-const useLocalStorage = (itemName = 'TODOS_V1', initialValue = []) => {
+const useLocalStorage = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-    const [item, setItem] = useState(initialValue)
+    const [item, setItem] = useState([])
     const [sincronizedItem, setSincronizedItem] = useState(true)
   
     useEffect(() => {
       setTimeout(() => {
         try {
-          const localStorageItem = localStorage.getItem(itemName);
+          const localStorageItem = localStorage.getItem('TODOS_V1');
           let parsedItem;
   
           if(!localStorageItem) {
-            localStorage.setItem(itemName, JSON.stringify(initialValue));
-            parsedItem = initialValue;
+            localStorage.setItem('TODOS_V1', JSON.stringify([]));
+            parsedItem = [];
           } else {
             parsedItem = JSON.parse(localStorageItem);
           }
@@ -31,7 +31,7 @@ const useLocalStorage = (itemName = 'TODOS_V1', initialValue = []) => {
     const saveItem = newItem => {
       try {
         const stringifiedItem = JSON.stringify(newItem);
-        localStorage.setItem(itemName, stringifiedItem);
+        localStorage.setItem('TODOS_V1', stringifiedItem);
         setItem(newItem);
       } catch (error) {
         setError(error);

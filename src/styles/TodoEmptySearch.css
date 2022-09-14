@@ -1,0 +1,17 @@
+.NoResultsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.NoResultsIcon {
+    font-size: 86px;
+}
+
+.NoResultsTitle {
+    font-size: 30px;
+}
+
+.NoResultsText {
+    font-size: 18px;
+}

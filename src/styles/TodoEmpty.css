@@ -1,0 +1,24 @@
+.EmptyContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.EmptyIcon {
+    font-size: 86px;
+}
+
+.EmptyTitle {
+    font-size: 30px;
+}
+
+.EmptyText {
+    font-size: 18px;
+}
+.EmptyText span {
+    background-color: #52b3ce;
+    color: #e6e9e8;
+    padding: 2px 8px;
+    border-radius: 100%;
+    font-weight: 700;
+}

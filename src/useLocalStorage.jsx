@@ -39,6 +39,10 @@ const reducer = (state, action) => {
         loading: true,
         sincronizedItem: false
       };
+    default:
+      return {
+        ...state
+      };
   }
 };
 

@@ -50,21 +50,25 @@ const useTodos = () => {
         saveTodos(newTodos);
     };
 
-    return {
+    const states = {
         loading,
         error,
         totalTodos,
         completedTodo,
         searchValue,
+        openModal,
+    };
+    const statesUpdaters = {
         setSearchValue,
         searchedTodos,
         completedTodos,
         deleteTodo,
-        openModal,
         setOpenModal,
         saveTodo,
         sincronize
     };
+
+    return {states, statesUpdaters};
 }
 
 export default useTodos;

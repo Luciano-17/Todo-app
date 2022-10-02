@@ -16,21 +16,24 @@ import TodoEmptySearch from "./components/TodoEmptySearch";
 import ChangeAlertWithStorageListener from "./components/ChangeAlert";
 
 function App() {
+  const { states, statesUpdaters } = useTodos();
   const {
-    error,
     loading,
-    searchedTodos,
+    error,
+    totalTodos,
     completedTodo,
-    deleteTodo,
+    searchValue,
     openModal,
-    setOpenModal,
-    totalTodos, 
-    completedTodos,
-    searchValue, 
+  } = states;
+  const {
     setSearchValue,
+    searchedTodos,
+    completedTodos,
+    deleteTodo,
+    setOpenModal,
     saveTodo,
     sincronize
-  } = useTodos();
+  } = statesUpdaters;
 
   return (
     <>
